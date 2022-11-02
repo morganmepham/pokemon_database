@@ -1,0 +1,102 @@
+
+.search-div{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-input{
+    width: 50%;
+    height: 60%;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 0.1rem solid #000;
+}
+.search-input:focus{
+    outline: none;
+}
+.search-button{
+    background-color: #fff;
+    border: 0.1rem solid #000;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    margin-left: 1rem;
+}
+.search-button:hover{
+    font-weight: 600;
+}
+.search-button:active{
+    font-weight: 500;
+}
+
+
+.body-div{
+    height: 80%;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 25rem;
+    justify-items: center;
+    align-items: center;
+}
+.loading-ball{
+    grid-column: 2/4;
+    justify-self: center;
+    align-self: center;
+    animation: spin infinite 2s linear;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+}
+
+
+.poke-item{
+    height: 90%;
+    width: 90%;
+    border: 0.3rem solid #1858ce;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+.poke-img{
+    width: 95%;
+    height: 95%;
+    justify-self: center;
+    align-self: center;
+}
+.poke-name{
+    justify-self: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .body-div{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 700px) {
+    .body-div{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 470px) {
+    .body-div{
+        grid-template-columns: 1fr;
+    }
+    .search-input{
+        width: 70%;
+    }
+}
